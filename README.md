@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fadhlan Syahran Jungjungan - Developer Profile
 
-## Getting Started
+A modern, animated developer portfolio website built with **Next.js 14**, **Tailwind CSS**, and crafted using **Kilo Code** with **Minimax M2.7**.
 
-First, run the development server:
+## Built With
+
+| Category | Technology |
+|----------|------------|
+| Framework | [Next.js 14](https://nextjs.org) (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| AI Assistance | [Kilo Code](https://kilo.ai) + [Minimax M2.7](https://minimax.io) |
+| Deployment | Vercel / Dokploy |
+
+## Features
+
+- **Dark Theme** - Modern dark UI with electric blue and cyan accents
+- **Smooth Animations** - Fade-in, floating, bouncing, and glow effects
+- **Responsive Design** - Mobile and desktop optimized
+- **Hero Section** - Profile photo with animated introduction
+- **Tech Stack Grid** - Showcase of skills with icons
+- **Project Gallery** - GitHub repositories with tech tags
+- **GitHub Stats** - Profile statistics display
+- **Contact Section** - Social links (GitHub, Instagram, LinkedIn)
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the profile.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+web-profile/
+├── src/
+│   └── app/
+│       ├── page.tsx      # Main profile page
+│       ├── layout.tsx    # Root layout with fonts
+│       └── globals.css   # Tailwind & custom styles
+├── public/               # Static assets
+├── package.json
+├── tailwind.config.ts    # Tailwind configuration
+└── tsconfig.json         # TypeScript configuration
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `src/app/page.tsx` to update:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Profile data** - Name, title, bio at the top of the file
+- **Skills** - Modify the `skills` array with your tech stack
+- **Projects** - Update the `projects` array with your GitHub repos
+- **Social links** - Update URLs in the contact section
 
-## Deploy on Vercel
+### Update Profile Image
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The profile image is fetched from GitHub avatar URL. To use a custom image:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Replace the GitHub avatar URL with your image path in `/public/`
+2. Update the `Image` src attributes in `page.tsx`
+
+### Styling
+
+Customize colors and animations in `src/app/globals.css`:
+
+- `--accent` - Primary blue color
+- `--accent-secondary` - Cyan accent
+- Animation keyframes for custom effects
+
+## GitHub Integration
+
+This profile automatically displays:
+
+- Avatar from GitHub
+- Public repositories
+- Fork and star counts
+- Links to all projects
+
+Update the GitHub username in the code to display your own stats.
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Deploy automatically
+
+### Dokploy
+
+```bash
+# Build the project
+npm run build
+
+# The output is in .next/ folder
+```
+
+## Credits
+
+- **AI Development** - Built with [Kilo Code](https://kilo.ai) using [Minimax M2.7](https://minimax.io) model
+- **Framework** - [Next.js by Vercel](https://nextjs.org)
+- **Icons** - Emoji icons for skill badges
+
+---
+
+Made with ☕ and AI assistance
